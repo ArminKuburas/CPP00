@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:06:45 by akuburas          #+#    #+#             */
-/*   Updated: 2024/07/29 14:17:56 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/07/29 14:27:42 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void PhoneBook::AddContact(void)
 	std::getline(std::cin, nickname);
 	std::cout << "Enter the phone number: ";
 	std::getline(std::cin, phone_number);
-	std::cout << "Enter darkest secret";
+	std::cout << "Enter darkest secret: ";
 	std::getline(std::cin, darkest_secret);
 
 	if (first_name.empty() || last_name.empty() || nickname.empty() || phone_number.empty() || darkest_secret.empty())

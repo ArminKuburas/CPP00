@@ -6,13 +6,13 @@
 #    By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 14:22:23 by akuburas          #+#    #+#              #
-#    Updated: 2024/07/29 14:24:01 by akuburas         ###   ########.fr        #
+#    Updated: 2024/07/29 14:26:13 by akuburas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp, PhoneBook.cpp, Contact.cpp
+SRC = main.cpp PhoneBook.cpp Contact.cpp
 OBJ = $(SRC:.cpp=.o)
 NAME = phonebook
 
