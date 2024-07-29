@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:06:45 by akuburas          #+#    #+#             */
-/*   Updated: 2024/07/29 14:27:42 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/07/29 14:31:28 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void PhoneBook::AddContact(void)
 		std::cout << "One or more fields are empty. Contact not added." << std::endl;
 		return ;
 	}
-	
 	int index = (_contact_count < 8) ? _contact_count : _oldest_contact_index;
 	_contacts[index].SetDetails(first_name, last_name, nickname, phone_number, darkest_secret);
 	if (_contact_count < 8)
