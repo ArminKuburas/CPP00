@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 13:45:11 by akuburas          #+#    #+#             */
-/*   Updated: 2024/07/29 13:55:17 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/07/31 09:52:13 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Contact
 		void SetDetails(const std::string& FirstName, const std::string& LastName, const std::string& Nickname, const std::string& PhoneNumber, const std::string& DarkestSecret);
 		void DisplayShortenedDetails(int index) const;
 		void DisplayFullDetails(void) const;
-		bool IsEmpty(void) const;
 	private:
 		std::string _first_name;
 		std::string _last_name;

@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:06:45 by akuburas          #+#    #+#             */
-/*   Updated: 2024/07/29 14:31:28 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/07/31 09:19:53 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void PhoneBook::AddContact(void)
 
 void PhoneBook::SearchContact(void) const
 {
+	//int	i;
 	if (_contact_count == 0)
 	{
 		std::cout << "No contacts to display." << std::endl;
@@ -64,6 +65,12 @@ void PhoneBook::SearchContact(void) const
 	std::cout << "Enter the index of the contact you want to display: ";
 	int index;
 	std::cin >> index;
+	if (std::cin.eof())
+	{
+		std::cout << std::endl;
+		return ;
+	}
+	else
 	if (std::cin.fail() || index < 0 || index >= _contact_count)
 	{
 		std::cin.clear();

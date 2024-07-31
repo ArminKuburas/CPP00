@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 13:55:31 by akuburas          #+#    #+#             */
-/*   Updated: 2024/07/29 14:03:39 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/07/31 09:52:10 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void Contact::SetDetails(const std::string& FirstName, const std::string& LastNa
 void Contact::DisplayShortenedDetails(int index) const
 {
 	std::cout << std::setw(10) << index << "|";
-	std::cout << std::setw(10) << (_first_name.length() > 10 ? _first_name.substr(0, 9) + "." : _last_name) << "|";
+	std::cout << std::setw(10) << (_first_name.length() > 10 ? _first_name.substr(0, 9) + "." : _first_name) << "|";
     std::cout << std::setw(10) << (_last_name.length() > 10 ? _last_name.substr(0, 9) + "." : _last_name) << "|";
     std::cout << std::setw(10) << (_nickname.length() > 10 ? _nickname.substr(0, 9) + "." : _nickname) << std::endl;
 }
@@ -42,9 +42,4 @@ void Contact::DisplayFullDetails() const
 	std::cout << "Nickname: " << _nickname << std::endl;
 	std::cout << "Phone Number: " << _phone_number << std::endl;
 	std::cout << "Darkest Secret: " << _darkest_secret << std::endl;
-}
-
-bool Contact::IsEmpty() const
-{
-	return (_first_name.empty() && _last_name.empty() && _nickname.empty() && _phone_number.empty() && _darkest_secret.empty());
 }
