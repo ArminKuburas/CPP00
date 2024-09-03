@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:06:45 by akuburas          #+#    #+#             */
-/*   Updated: 2024/07/31 09:19:53 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/09/03 12:23:15 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,6 @@ void PhoneBook::AddContact(void)
 
 void PhoneBook::SearchContact(void) const
 {
-	//int	i;
 	if (_contact_count == 0)
 	{
 		std::cout << "No contacts to display." << std::endl;
@@ -63,14 +62,31 @@ void PhoneBook::SearchContact(void) const
 	for (int i = 0; i < _contact_count; i++)
 		_contacts[i].DisplayShortenedDetails(i);
 	std::cout << "Enter the index of the contact you want to display: ";
-	int index;
-	std::cin >> index;
-	if (std::cin.eof())
+	int index = 0;
+	std::string input;
+	std::getline(std::cin, input);
+	if (input.empty())
+	{
+		std::cout << "Invalid index." << std::endl;
+		return ;
+	}
+	if (std::cin.eof() || std::cin.bad())
 	{
 		std::cout << std::endl;
 		return ;
 	}
-	else
+	for (size_t i = 0; i < input.length(); i++)
+	{
+		if (!std::isdigit(input[i]))
+		{
+			std::cout << "Invalid index." << std::endl;
+			return ;
+		}
+		else
+		{
+			index = index * 10 + input[i] - '0';
+		}
+	}
 	if (std::cin.fail() || index < 0 || index >= _contact_count)
 	{
 		std::cin.clear();
