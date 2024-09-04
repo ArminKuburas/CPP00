@@ -6,7 +6,7 @@
 #    By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/01 03:36:09 by akuburas          #+#    #+#              #
-#    Updated: 2024/08/01 04:03:47 by akuburas         ###   ########.fr        #
+#    Updated: 2024/09/04 09:25:10 by akuburas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,10 @@ OBJ=$(SRC:.cpp=.o)
 all: $(NAME)
 
 $(OBJ): $(SRC)
-	c++ -Wall -Wextra -Werror -c $(SRC)
+	c++ -Wall -Wextra -Werror  -std=c++98 -c $(SRC)
 
 $(NAME): $(OBJ)
-	c++ -Wall -Wextra -Werror $(SRC) -o $(NAME)
+	c++ -Wall -Wextra -Werror  -std=c++98 $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)

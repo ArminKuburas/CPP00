@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/01 03:08:43 by akuburas          #+#    #+#             */
-/*   Updated: 2024/08/01 03:33:56 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/09/04 09:25:24 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int Account::_totalNbWithdrawals = 0;
 
 void	Account::_displayTimestamp(void)
 {
-	std::time_t now = std::time(nullptr);
+	std::time_t now = std::time(NULL);
 	std::tm *local_time = std::localtime(&now);
 	std::cout << "[" << (local_time->tm_year + 1900)
 				<< std::setw(2) << std::setfill('0') 
