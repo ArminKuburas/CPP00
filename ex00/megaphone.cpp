@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 12:06:31 by akuburas          #+#    #+#             */
-/*   Updated: 2024/09/02 01:40:15 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/09/04 09:05:44 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ int	main(int argc, char **argv)
 			std::string str = argv[i];
 			for (size_t j = 0; j < str.length(); j++)
 				std::cout << static_cast<char>(std::toupper(str[j]));
-			if (i < argc - 1)
-				std::cout << " ";
 		}
 		std::cout << std::endl;
 	}

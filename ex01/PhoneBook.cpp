@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:06:45 by akuburas          #+#    #+#             */
-/*   Updated: 2024/09/05 02:13:44 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/09/05 02:16:47 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,15 +87,12 @@ void PhoneBook::SearchContact(void) const
 			index = index * 10 + input[i] - '0';
 		}
 	}
-	if (std::cin.fail() || index < 0 || index >= _contact_count)
+	if (index < 0 || index >= _contact_count)
 	{
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << "Invalid index." << std::endl;
 	}
 	else
 	{
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		_contacts[index].DisplayFullDetails();
 	}
 }
