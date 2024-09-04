@@ -6,7 +6,7 @@
 /*   By: akuburas <akuburas@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 14:06:45 by akuburas          #+#    #+#             */
-/*   Updated: 2024/09/03 12:23:15 by akuburas         ###   ########.fr       */
+/*   Updated: 2024/09/05 02:13:44 by akuburas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ void PhoneBook::SearchContact(void) const
 	int index = 0;
 	std::string input;
 	std::getline(std::cin, input);
-	if (input.empty())
+	if (input.empty() || input.length() > 1)
 	{
 		std::cout << "Invalid index." << std::endl;
 		return ;
